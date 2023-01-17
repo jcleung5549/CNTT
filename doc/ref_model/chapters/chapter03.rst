@@ -359,15 +359,15 @@ The hardware infrastructure manager needs to support the following functional as
 
 The Redfish Standard and the ODIM Implementation 
 ------------------------------------------------
-The GSMA's "Cloud Infrastructure Reference Model (NG.126)" specifies Redfish as the standard interface that should be 
+The GSMA's "Cloud Infrastructure Reference Model (NG.126)" specifies standard interfaces that should be 
 made available by the infrastructure and Cloud Infrastructure Management components.  For the "Infrastructure Hardware" layer, 
 the document specifies DMTF's Redfish interface.
  
 Redfish is an internationally recognized standard `ISO/IEC 30115:2018  <https://www.iso.org/standard/83853.html>`__. The Redfish interface specifies a HTTP RESTful interface 
 that a client can use to manage conformant platforms. The Redfish standard consists of a Redfish interface specification 
-`Redfish Specification <https://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.8.0.pdf>`__ and model specification `Redfish Data Model Specification <https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf>`__.  The interface specification defines the 
+`Redfish Specification <https://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.8.0.pdf>`__ and data model specification `Redfish Data Model Specification <https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf>`__.  The interface specification defines the 
 RESTful behavior of the resources.  The data model specification defines the structure of the HTTP resources.  The model is expressed 
-as schema using OpenAPI and json-schema formats.  The schema allows the OpenAPI and json-schema toolchains to be used in 
+as schema in OpenAPI and json-schema formats. The schema files allow the OpenAPI and json-schema toolchains to 
 implement a Redfish Client.
 
 There are several opensource implementations of Redfish Clients and Redfish Services. 
@@ -375,8 +375,7 @@ The Open Distributed Infrastructure Management `ODIM <https://odim.io/>`__ repos
 infrastructure manager which aggregates and exposes a standards-based Redfish interface and services northbound to an Orchestrator. It also includes a Plugin layer that adapts non-Redfish compliant data models interfaces, allowing for the aggregated management of multiple fully compliant or vendor specific southbound interfaces to their respective managed 
 infrastructure clients.
 
-DMTF specifies the Redfish interface and model, seeking to expand the manageability domains. The prescription of what subset of the 
-Redfish model needs to be implemented for a specific manageability domain is left to other standards bodies.  Redfish had defined a 
+DMTF specifies the Redfish interface and model, seeking to expand the number of domains (server, storage, data centers) which can utilize Redfish. The standards bodies with a specific manageability domain can prescribe a subset of the Redfish model.  Redfish had defined a 
 JSON syntax for the prescription call a Redfish Profile and implemented an application which reads the Redfish Profile and tests for 
 conformance of an implementation `Interop Validator <https://github.com/DMTF/Redfish-Interop-Validator>`__ .  The Redfish Profile mechanism is being utilized by the Open Compute Project 
 and Open Process Automation Forum.  The ODIM project has proposed a Redfish Profile.
