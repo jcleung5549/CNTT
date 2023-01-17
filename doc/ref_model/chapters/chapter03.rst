@@ -379,7 +379,7 @@ DMTF specifies the Redfish interface and model, seeking to expand the manageabil
 Redfish model needs to be implemented for a specific manageability domain is left to other standards bodies.  Redfish had defined a 
 JSON syntax for the prescription call a Redfish Profile and implemented an application which reads the Redfish Profile and tests for 
 conformance of an implementation `Interop Validator <https://github.com/DMTF/Redfish-Interop-Validator>`__ .  The Redfish Profile mechanism is being utilized by the Open Compute Project 
-and Open Process Automation Forum.  The ODIM project has proposed a Redfish Profile.
+and Open Process Automation Forum.  The ODIM project has a Redfish Profile.
 
 Redfish fulfills the following requirements stated in the above HW Infrastructure Manager section:
 
@@ -399,10 +399,9 @@ Redfish fulfills the following requirements stated in the above HW Infrastructur
 
 -	**Additional Management Functions**: The Redfish schema has models for access management and identity management. Redfish has published work-in-progress extension for support policy management and OS/VM management `Policy Model Proposal, Redfish for Operating Systems, Applications and Containers <https://www.dmtf.org/documents/redfish-spmf/redfish-operating-systems-applications-and-containers-05wip>`__
 
-The ODIM implementation supports the account, aggregation, composition, events, fabric, license, managers, session, systems, task, 
-telemetry and update models.
-
 Open Distributed Infrastructure Management (ODIM™) is a Linux Foundation Networking open source project.  The project has developed a modular, open framework for simplified management and orchestration of distributed, multi-vendor, physical infrastructure.  More information about ODIM is available at `odim.io <https://odim.io>`__.
+
+ODIM exposes a Redfish interface northbound to infrastructure management systems. This northbound interface exposes Redfish models for account, aggregation, composition, events, fabric, license, managers, session, systems, task, telemetry and update services.
 
 ODIM comprises the following two key components:
 
